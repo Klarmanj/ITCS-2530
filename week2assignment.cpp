@@ -7,9 +7,9 @@
 
 using namespace std;
 // Created constants to define the weight per container of cheese, the cost of production, and the profit per container
-double weightOfCheese = 2.76;
-double productionCost = 4.12;
-double profit = 1.45;
+const double WEIGHT_OF_CHEESE = 2.76;
+const double PRODUCTION_COST = 4.12;
+const double PROFIT = 1.45;
 double kgOfCheese = 0;
 
 
@@ -25,11 +25,11 @@ int main()
     stars();
     cout << left << setw(22) << setfill('*') << "" << " Welcome to my Cheesy Program " << setw(22) << setfill('*') << "" << endl;
     stars();
-    cout << "" << endl;
-    cout << left << "Please enter the total number of kilograms of cheesed produced:  ";
+    cout << '\n';
+    cout << "Please enter the total number of kilograms of cheesed produced:  ";
     cin >> kgOfCheese;
-    double container = kgOfCheese / weightOfCheese;
-    cout << left << "The number of containers to hold the cheese is:  ";
+    double container = kgOfCheese / WEIGHT_OF_CHEESE;
+    cout << "The number of containers to hold the cheese is:  " << int (container + .5);
     //cout << right << container * productionCost << endl;
 
 
